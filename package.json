@@ -1,6 +1,6 @@
 {
   "name": "sendlist",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "description": "A minimalist list sending app",
   "scripts": {
     "start": "node ./server/app",
@@ -18,11 +18,12 @@
   ],
   "author": "Israel Cruz @dantaex",
   "contributors": [
-                    { "name" : "Marco A. Rojas"
-                    , "email" : "contact@marcorojas.me"
-                    , "url" : "http://marcorojas.me/"
-                    }
-                  ],
+    {
+      "name": "Marco A. Rojas",
+      "email": "contact@marcorojas.me",
+      "url": "http://marcorojas.me/"
+    }
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/MrcRjs/sendlist/issues"

@@ -15,7 +15,8 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),
     notify = require('gulp-notify'),
     jade = require('gulp-jade'),
-    Filter = require('gulp-filter');
+    Filter = require('gulp-filter'),
+    mocha = require('gulp-mocha');;
 
 
 /**
@@ -88,11 +89,20 @@ gulp.task('watch',function(){
  gulp.watch( dev+'index.jade', ['index'] );
 });
 
+/**
+ * Test 
+ */
+gulp.task('test', () => {
+    return gulp.src('../test/tests.js', {read: false})
+        // gulp-mocha needs filepaths so you can't have any plugins before it
+        .pipe(mocha({reporter: 'nyan'}));
+});
 
 /**
  * Watch
  */
 gulp.task('default',function(){
+  gulp.start('test');
   gulp.start('styles'); 
   gulp.start('scripts');
   gulp.start('templates');

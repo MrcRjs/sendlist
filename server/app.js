@@ -82,7 +82,6 @@ app.use(function(err, req, res, next) {
 var port = process.env.OPENSHIFT_NODEJS_PORT || config.test_port;
 var serverIp = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
 app.set('port', port);
-app.set('serverIP', serverIP);
 
 
 /*----------  Database setup  ----------*/

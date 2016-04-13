@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+  - "5"
+  - "5.1"
+  - "4"
+  - "4.2"
+deploy:
+  provider: openshift
+  user: marco1095@outlook.com
+  password:
+    secure: islLy1soqWc2cO3wWMbX8l0SSDuRHLZyLTYtuwWI1gnJsA87sdle+yGaYjql5UFHij3nE0WesUwRBNsB71JcANgGk0dCDtJvr05IUteOh7rxMFe6RGsMawt3R10lxjVrqV/yK7auRE4Nog55gIsF9BQnd7P7eFrI5dwJpOWptrtaxVoLElCNMbAsV4dwFHAN+AMsEwmtCUnWQzj9QTL2tH9u7M4An8D8plx6LONV9kT9H+SjB3rUiLEs8yb14skyBqseWfNQM5Nrx2VNk3S5XonLVRx+RUSKAslpEvPHNrq+2IVlACXX+S199cQRblo0kD/alb7zpSZQijXb+n+UW7/EWGeCLRhDNzWpDwuTYU6ptk5Ty4WnVr5mXBzEwH+lminJ1A/p4LM+TzUwA4wFchlSutQWO5LGXAoiXEIw6J5IeQqCkn7JkC9X3FB1+PAN5T10uTD2rLEBXIDYjxcwWGp+xeLuHglxFRxtniT5frOeL8NQcP6tcz+BSJUIF1yiB2rH+e21TytWjKgrKyXuYgjsb/wmtAgVkryz014raZwNafbwR6AW6z6QVOAPDzv/M8sRHC+9j6IBHmEI249kYPFj68qWiULeW+Ie+EZC86re3fQYyOrRJMmH8EhzVmgo/d4riePXd9kfiBd7gE18yJYSvYqkW3xUFIA7EIu6NhQ=
+  app: sendlist
+  domain: mrcrjs
+  on:
+    repo: MrcRjs/sendlist

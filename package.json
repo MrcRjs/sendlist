@@ -3,7 +3,8 @@
   "version": "1.5.0",
   "description": "A minimalist list sending app",
   "scripts": {
-    "start": "node ./server/app"
+    "start": "node ./server/app",
+    "test": "gulp --gulpfile client/gulpfile.js"
   },
   "repository": {
     "type": "git",

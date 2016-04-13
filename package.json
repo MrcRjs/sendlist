@@ -1,13 +1,13 @@
 {
   "name": "sendlist",
-  "version": "1.0.0",
+  "version": "1.5.0",
   "description": "A minimalist list sending app",
   "scripts": {
     "start": "node ./server/app"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dantaex/sendlist.git"
+    "url": "git+https://github.com/MrcRjs/sendlist.git"
   },
   "keywords": [
     "lists",
@@ -16,11 +16,17 @@
     "angularjs"
   ],
   "author": "Israel Cruz @dantaex",
+  "contributors": [
+                    { "name" : "Marco A. Rojas"
+                    , "email" : "contact@marcorojas.me"
+                    , "url" : "http://marcorojas.me/"
+                    }
+                  ]
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/dantaex/sendlist/issues"
+    "url": "https://github.com/MrcRjs/sendlist/issues"
   },
-  "homepage": "https://github.com/dantaex/sendlist#readme",
+  "homepage": "https://github.com/MrcRjs/sendlist#readme",
   "//": "Backend dependencies",
   "dependencies": {
     "bcryptjs": "^2.3.0",
@@ -36,11 +42,13 @@
     "sha.js": "^2.4.5"
   },
   "devDependencies": {
+    "chai": "^3.5.0",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.0",
     "gulp-filter": "^4.0.0",
     "gulp-jade": "^1.1.0",
     "gulp-minify-css": "^1.2.4",
+    "gulp-mocha": "^2.2.0",
     "gulp-notify": "^2.2.0",
     "gulp-rename": "^1.2.2",
     "gulp-stylus": "^2.3.1",

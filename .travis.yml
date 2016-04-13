@@ -1,9 +1,9 @@
 language: node_js
 node_js:
-  - "5"
-  - "5.1"
-  - "4"
-  - "4.2"
+- '5'
+- '5.1'
+- '4'
+- '4.2'
 deploy:
   provider: openshift
   user: marco1095@outlook.com
@@ -13,3 +13,6 @@ deploy:
   domain: mrcrjs
   on:
     repo: MrcRjs/sendlist
+notifications:
+  slack:
+    secure: vdasuebmi+vI1IMyBLhdBIUi1NjbD02p+9AC7siqpTpk6r9pE+alLzgcE3uQo3+xQ653cAfP+yOQrcGCPUu4g/BEp8Q27CJKQf8dAuql+nB68OE9aP3b8pdbiFAJsfW6dMYru88bJuTn1q3ONqPEgIq8WVNF++gUG0opeajc+EVQkRXCT4kjV9ha98eXJHj+gwxAAgBhhx2OvQpJ5tO7y2YPMyVTeezFnLeoR/fnWsNjcLctpvM54qxrA2KpnmBkE3BP8zKEMKRtBWNGxK0wpfmWdNvZvY7nYqV3PuwQvmS9h07/bTfMyEjO5xUP24xENtDak+MfsBXcMBsvOXBZsiBlzHzJPUZ92OI/PrIQs4f7RGLeXMvTrALqiREp4PBa2z/1esisFO2cbr/kZcWTn62OIgNan0XR1ii/S9X9L+chUzr5QaaR0xwkr2zEN3u5Jhw/AdzJE36F1KfUwvDPXnkHgCaho7FcZnUkMLOT+gnihUCU9i86nT6BqtOXBZAcO/U0spxQGWrtutrNlRKr0eOFe2Y+6IHaMgVZYqVTeG1E5Q5lduUINbLivcuXp9z2TNM1F6rFe2fci3I1UN8lBoYVhy5CXUSywQ023/C6JDXulCtOMayRfu24dnrCwXl4TQUUgoi+4LmWRUVcFbgrfJMMf/wFNwnm0sESHBGUvb4=

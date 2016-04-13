@@ -120,7 +120,7 @@ var server = http.createServer(app);
 /**
  * Listen on provided port, on all network interfaces.
  */
-server.listen(serverIp,port);
+server.listen(port,serverIp);
 
 /**
  * Event listener for HTTP server "error" event.

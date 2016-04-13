@@ -1,6 +1,6 @@
 {
   "name": "sendlist",
-  "version": "1.5.1",
+  "version": "2.0.0",
   "description": "A minimalist list sending app",
   "scripts": {
     "start": "node ./server/app",

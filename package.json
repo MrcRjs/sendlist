@@ -21,7 +21,7 @@
                     , "email" : "contact@marcorojas.me"
                     , "url" : "http://marcorojas.me/"
                     }
-                  ]
+                  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/MrcRjs/sendlist/issues"

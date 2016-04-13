@@ -20,7 +20,7 @@ module.exports = {
 	/**
 	 * The development port
 	 */
-	test_port  : 8282,
+	test_port  : 8080,
 
 	/**
 	 * The Mongodb URI (development)

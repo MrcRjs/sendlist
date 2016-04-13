@@ -79,8 +79,10 @@ app.use(function(err, req, res, next) {
 /**
  * Get port from environment and store in Express.
  */
-var port = parseInt(process.env.PORT, 10) || config.test_port;
+var port = process.env.OPENSHIFT_NODEJS_PORT || config.test_port;
+var serverIp = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
 app.set('port', port);
+app.set('serverIP', serverIP);
 
 
 /*----------  Database setup  ----------*/
@@ -119,7 +121,7 @@ var server = http.createServer(app);
 /**
  * Listen on provided port, on all network interfaces.
  */
-server.listen(port);
+server.listen(serverIP,port);
 
 /**
  * Event listener for HTTP server "error" event.

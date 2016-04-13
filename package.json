@@ -3,9 +3,10 @@
   "version": "2.0.0",
   "description": "A minimalist list sending app",
   "scripts": {
-    "start": "node ./server/app",
+    "start": "node ./server/app.js",
     "test": "gulp --gulpfile client/gulpfile.js"
   },
+  "main": "./server/app.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/MrcRjs/sendlist.git"

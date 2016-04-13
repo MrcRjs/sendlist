@@ -31,6 +31,6 @@ module.exports = {
 	 * The Mongodb URI (PRODUCTION)
 	 * taken from env
 	 */
-	database_uri_PROD : process.env.MONGO_SENDLIST_URI
+	database_uri_PROD : mongodb://$OPENSHIFT_MONGODB_DB_HOST:$OPENSHIFT_MONGODB_DB_PORT/
 
 };

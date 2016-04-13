@@ -92,7 +92,7 @@ gulp.task('watch',function(){
 /**
  * Test 
  */
-gulp.task('test', () => {
+gulp.task('test', function(){
     return gulp.src('../test/tests.js', {read: false})
         // gulp-mocha needs filepaths so you can't have any plugins before it
         .pipe(mocha({reporter: 'nyan'}));

@@ -7,7 +7,7 @@ var mongoose 	= require("mongoose");
 
 chai.use(chaiHttp);
 
-var server = require('../server/app');
+//var server = require('../server/app');
 
 
 describe('foo bar', function(){
@@ -41,7 +41,7 @@ describe('Bebidas', function() {
 	});*/
 });
 
-describe('Inicio', function(){
+/*describe('Inicio', function(){
   it('should return 200 response', function() {
   	chai.request("http://localhost:8080")
     .get('/')
@@ -49,4 +49,4 @@ describe('Inicio', function(){
       res.should.have.status(200);
   	});
   });
-});
+});*/

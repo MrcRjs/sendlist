@@ -12,7 +12,7 @@ angular.module('external',[])
  *
  */
 .factory('jsSHA',function(){
-	return window['jsSHA'];
+	return window.jsSHA;
 })
 
 /**

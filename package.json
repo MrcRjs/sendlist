@@ -1,14 +1,14 @@
 {
   "name": "sendlist",
-  "version": "2.0.3",
+  "version": "2.1.0",
   "description": "A minimalist list sending app",
   "scripts": {
-    "start":    "node ./server/app.js",
-    "lint":     "echo '-=> linting <=-' && jshint ./**/*.js",
-    "pretest":  "npm run lint",
-    "test":     "echo '-=> testing <=-' && gulp test --gulpfile client/gulpfile.js",
+    "start": "node ./server/app.js",
+    "lint": "echo '-=> linting <=-' && jshint ./**/*.js",
+    "pretest": "npm run lint",
+    "test": "echo '-=> testing <=-' && gulp test --gulpfile client/gulpfile.js",
     "prebuild": "npm run test",
-    "build":    "echo '-=> building <=-' &&gulp --gulpfile client/gulpfile.js"
+    "build": "echo '-=> building <=-' &&gulp --gulpfile client/gulpfile.js"
   },
   "main": "./server/app.js",
   "repository": {

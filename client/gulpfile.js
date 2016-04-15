@@ -16,7 +16,7 @@ var gulp = require('gulp'),
     notify = require('gulp-notify'),
     jade = require('gulp-jade'),
     Filter = require('gulp-filter'),
-    mocha = require('gulp-mocha');;
+    mocha = require('gulp-mocha');
 
 
 /**
@@ -102,7 +102,6 @@ gulp.task('test', function(){
  * Watch
  */
 gulp.task('default',function(){
-  gulp.start('test');
   gulp.start('styles'); 
   gulp.start('scripts');
   gulp.start('templates');

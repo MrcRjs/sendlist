@@ -4,7 +4,8 @@
   "description": "A minimalist list sending app",
   "scripts": {
     "start": "node ./server/app.js",
-    "test": "gulp --gulpfile client/gulpfile.js"
+    "test": "gulp --gulpfile client/gulpfile.js",
+    "postinstall": "cd client && HOME=$OPENSHIFT_REPO_DIR bower install || bower install"
   },
   "main": "./server/app.js",
   "repository": {

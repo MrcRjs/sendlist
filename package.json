@@ -3,9 +3,12 @@
   "version": "2.0.3",
   "description": "A minimalist list sending app",
   "scripts": {
-    "start": "node ./server/app.js",
-    "test": "gulp --gulpfile client/gulpfile.js",
-    "postinstall": "cd client && HOME=$OPENSHIFT_REPO_DIR bower install || bower install"
+    "start":    "node ./server/app.js",
+    "lint":     "echo '-=> linting <=-' && jshint ./**/*.js",
+    "pretest":  "npm run lint",
+    "test":     "echo '-=> testing <=-' && gulp test --gulpfile client/gulpfile.js",
+    "prebuild": "npm run test",
+    "build":    "echo '-=> building <=-' &&gulp --gulpfile client/gulpfile.js"
   },
   "main": "./server/app.js",
   "repository": {
@@ -56,6 +59,7 @@
     "gulp-notify": "^2.2.0",
     "gulp-rename": "^1.2.2",
     "gulp-stylus": "^2.3.1",
-    "gulp-uglify": "^1.5.3"
+    "gulp-uglify": "^1.5.3",
+    "jshint": "^2.9.1"
   }
 }

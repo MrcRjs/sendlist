@@ -1,0 +1,10 @@
+{
+  "curly":		true,
+  "devel":		true,
+  "eqeqeq":		true,
+  "indent":		2,
+  "trailing":	true,
+  "globals":{
+	"angular": 	true
+  }
+}

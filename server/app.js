@@ -79,8 +79,14 @@ app.use(function(err, req, res, next) {
 /**
  * Get port from environment and store in Express.
  */
-var port = process.env.OPENSHIFT_NODEJS_PORT || config.test_port;
-var serverIp = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
+ if(app.get('env') === 'development'){
+  var port = config.test_port;
+  var serverIp = '127.0.0.1';
+ }
+ else{
+  var port = process.env.OPENSHIFT_NODEJS_PORT;
+  var serverIp = process.env.OPENSHIFT_NODEJS_IP;
+}
 app.set('port', port);
 
 
@@ -89,7 +95,12 @@ app.set('port', port);
 /**
  * Create database connection
  */
-var db_uri = config.database_uri_PROD || config.database_uri_DEV;
+if(app.get('env') === 'development'){
+  var db_uri = config.database_uri_DEV;
+}
+else {
+  var db_uri = config.database_uri_PROD;
+}
 mongoose.connect(db_uri);
 
 /**

@@ -92,7 +92,7 @@ app.use(function(err, req, res, next) {
 /**
  * Get port from environment and store in Express.
  */
- if(app.get('env') === 'development' || 'test'){
+ if(app.get('env') === 'development'){
   var port = config.test_port;
   var serverIp = '127.0.0.1';
  }
@@ -110,9 +110,6 @@ app.set('port', port);
  */
 if(app.get('env') === 'development'){
   var db_uri = config.database_uri_DEV;
-}
-else if(app.get('env') === 'test'){
-  var db_uri = config.database_uri_TEST;
 }
 else {
   var db_uri = config.database_uri_PROD;

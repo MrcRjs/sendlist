@@ -42,9 +42,22 @@ app.use('/', router);
  * catch 404 and forward to error handler
  */
 app.use(function(req, res, next) {
-  var err = new Error('Not Found');
-  err.status = 404;
-  next(err);
+  res.status(404);
+
+  // respond with html page
+  if (req.accepts('html')) {
+    res.redirect('/not-found');
+    return;
+  }
+
+  // respond with json
+  if (req.accepts('json')) {
+    res.send({ error: 'Not found' });
+    return;
+  }
+
+  // default to plain-text. send()
+  res.type('txt').send('Not found');
 });
 
 /*----------  Error Handlers  ----------*/
@@ -79,7 +92,7 @@ app.use(function(err, req, res, next) {
 /**
  * Get port from environment and store in Express.
  */
- if(app.get('env') === 'development'){
+ if(app.get('env') === 'development' || 'test'){
   var port = config.test_port;
   var serverIp = '127.0.0.1';
  }
@@ -97,6 +110,9 @@ app.set('port', port);
  */
 if(app.get('env') === 'development'){
   var db_uri = config.database_uri_DEV;
+}
+else if(app.get('env') === 'test'){
+  var db_uri = config.database_uri_TEST;
 }
 else {
   var db_uri = config.database_uri_PROD;

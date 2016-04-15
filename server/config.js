@@ -27,6 +27,8 @@ module.exports = {
 	 */
 	database_uri_DEV  : 'mongodb://localhost:27017/sendlist',
 
+	database_uri_TEST  : 'mongodb://localhost:27017/test',
+
 	/**
 	 * The Mongodb URI (PRODUCTION)
 	 * taken from env

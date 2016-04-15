@@ -7,7 +7,7 @@
 		.section-title Your lists
 		hr
 		.input-group
-			input.form-control(type="text" ng-model="new_list.name" ng-enter="addList(new_list.name)" placeholder="Create a new list")
+			input.form-control(type="text" ng-model="new_list.name" ng-enter="addList(new_list.name)" placeholder="Create a new list" required)
 			.input-group-btn
 				button.btn.btn-default(ng-click="addList()" ng-disabled="new_list_input_lock")
 					i.fa.fa-plus
